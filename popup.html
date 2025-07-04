@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书评论采集工具</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <h1>📝 小红书评论采集</h1>
+            <p>轻松获取小红书页面的所有评论</p>
+        </div>
+        
+        <div class="content">
+            <div class="status-section">
+                <div class="status-item">
+                    <span class="label">当前状态：</span>
+                    <span class="status" id="status">等待采集</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">已采集：</span>
+                    <span class="count" id="comment-count">0</span>
+                    <span class="label">条评论</span>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button id="start-collect" class="btn btn-primary">
+                    <span class="btn-icon">🚀</span>
+                    开始采集
+                </button>
+                <button id="export-data" class="btn btn-secondary" disabled>
+                    <span class="btn-icon">📥</span>
+                    导出数据
+                </button>
+            </div>
+            
+            <div class="settings">
+                <div class="setting-item">
+                    <input type="checkbox" id="auto-scroll" checked>
+                    <label for="auto-scroll">自动滚动加载更多评论</label>
+                </div>
+                <div class="setting-item">
+                    <input type="checkbox" id="export-csv" checked>
+                    <label for="export-csv">同时导出CSV格式</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="version">v1.0</p>
+            <p class="tip">💡 在小红书页面点击右侧的"采集评论"按钮即可开始</p>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 

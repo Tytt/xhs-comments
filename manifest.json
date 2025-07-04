@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "小红书评论采集工具",
+  "version": "1.0",
+  "description": "自动获取小红书页面的评论信息并导出",
+  "permissions": [
+    "storage",
+    "downloads",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.xiaohongshu.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "小红书评论采集工具"
+  }
+} 
